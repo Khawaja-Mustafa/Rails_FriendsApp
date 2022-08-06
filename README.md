@@ -24,9 +24,7 @@ Things you may want to cover:
 * ...
 * This Read me was updated...
 
-<!-- 
 i can push my code changes through this code in terminal
 	git add .
 	git commit -am "Edited the readme"
 	git push
--->
