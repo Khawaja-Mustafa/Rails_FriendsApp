@@ -6,7 +6,7 @@ ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.5', '>= 6.0.5.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# gem 'sqlite3', '~> 1.4'
 
 # This is the devise gem which is used for authentication and login (I Added it)
 gem 'devise', '~> 4.8', '>= 4.8.1'
@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+# we would do bundle install without production, as we would keep sqlite 3 for our pc database but postrage for our heroku database
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -44,6 +45,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'sqlite3', '~> 1.4'
+end
+# we would do bundle install without production, as we would keep sqlite 3 for our pc database but postrage for our heroku database
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.2'
+  #gem 'rails_12factor', '0.0.2'
 end
 
 group :test do
