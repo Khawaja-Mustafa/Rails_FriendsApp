@@ -1,0 +1,18 @@
+<h1>About us...</h1>
+
+<p>
+	<%= @about_me %>
+</p>
+<p>
+	<!-- Instance variable called from controller -->
+	2 + 2 = <%= @answer %>
+	<br/>
+	<!-- Local variable created and called -->
+	<% answer = 2 + 2 %>
+	2 + 2 = <%= answer %>
+</p>
+<!-- The best practice of development is to avoid using or putting operating code on views or our html display files -->
+<br>
+<%= link_to "Facebook", "https://m.facebook.com/KhawajaMustafa2", target:"_blank"  %>
+<%= link_to "Instagram", "https://www.instagram.com/kh_mustafa2/", target:"_blank"  %>
+<%= link_to "Linkedin", "https://www.linkedin.com/in/khawaja-mustafa/", target:"_blank"  %>
